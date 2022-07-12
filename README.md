@@ -31,7 +31,7 @@ wget -q --auth-no-challenge --user username --password password --output-documen
 ```
 - Save the output **Jenkins-Crumb** token in a file
 
-### <ins> Step 3:</ins> Build Job from the following URL 
+## Build Job from the following URL 
 By now we should have below details
 ### 1. Jenkins Job URL with token <br>
 ``` Eg. http://192.168.29.122:8080//job/job1/build?token=mytoken ```
