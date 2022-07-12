@@ -29,5 +29,5 @@ The ***authentication token*** is a token-based credentials that grant authoriza
 ```sh
 wget -q --auth-no-challenge --user username --password password --output-document - 'http://JENNKINS_IP:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)'
 ```
-- Save the token in a file
+- Save the output **Jenkins-Crumb** token in a file
 
