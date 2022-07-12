@@ -31,3 +31,21 @@ wget -q --auth-no-challenge --user username --password password --output-documen
 ```
 - Save the output **Jenkins-Crumb** token in a file
 
+### <ins> Step 3:</ins> Build Job from the following URL 
+By now we should have below details
+### 1. Jenkins Job URL with token <br>
+``` Eg. http://192.168.29.122:8080//job/job1/build?token=mytoken ```
+
+### 2. Username:API-Token
+``` Eg. admin:1142275a54707b6eebb88b84e3bc93edca ```
+
+### 3. Crumb
+``` Eg. Jenkins-Crumb:1d563a8634b57b1605d33c3c9c5fbdf992835df5cc0d307a657d356f79b699f5 ```
+
+### Fill all the above details in below URL and Execute
+```sh
+curl -I -X POST http://<username:APItoken-here>@<Jenkins_IP:8080/job/JOB_NAME/build?token=TOKENNAME-here> -H "<Jenkins-Crumb:CRUMB-here>"
+```
+``` Eg. curl -I -X POST http://admin:1142275a54707b6eebb88b84e3bc93edca@http://192.168.29.122:8080//job/job1/build?token=mytoken -H "Jenkins-Crumb:1d563a8634b57b1605d33c3c9c5fbdf992835df5cc0d307a657d356f79b699f5" ```
+
+
